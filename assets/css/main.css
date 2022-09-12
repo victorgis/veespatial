@@ -56,6 +56,15 @@ h6 {
   font-family: var(--font-primary);
 }
 
+.social-links-hero {
+  margin-bottom: 25px;
+}
+
+.social-links-hero .sp{
+  margin-right: 5%;
+  font-size: 160%;
+}
+
 /*--------------------------------------------------------------
 # Sections & Section Header
 --------------------------------------------------------------*/

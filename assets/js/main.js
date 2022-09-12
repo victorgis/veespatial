@@ -17,6 +17,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+ 
+
   /**
    * Sticky header on scroll
    */
