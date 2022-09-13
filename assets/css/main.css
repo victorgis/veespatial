@@ -1366,15 +1366,7 @@ section {
     background: #56b8e6;
   }
 
-  nav ul li.rr {
-    margin-bottom: 15px;
-    width: 30%;
-  }
   
-  nav ul li.rr:hover {
-    margin-bottom: 15px;
-    width: 30%;
-  }
 
   nav ul li.bt {
     width: 28%;
@@ -1383,8 +1375,18 @@ section {
     color: white;
     background: #56b8e6;
     /* border-radius: 0%; */
-    width: 28%;
+    width: 26%;
     /* margin-left: 10px; */
+  }
+
+  nav ul li.rr {
+    margin-bottom: 15px;
+    width: 30%;
+  }
+  
+  nav ul li.rr:hover {
+    margin-bottom: 15px;
+    width: 30%;
   }
   
 
