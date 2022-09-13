@@ -1373,7 +1373,7 @@ section {
     color: white;
     background: #56b8e6;
     /* border-radius: 0%; */
-    width: 28%;
+    width: 0%;
     /* margin-left: 10px; */
   }
   nav ul li.rr {
@@ -1383,7 +1383,7 @@ section {
   
   nav ul li.rr:hover {
     margin-bottom: 15px;
-    width: 30%;
+    width: 0%;
   }
 
   nav ul li.dpr {
