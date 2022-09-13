@@ -1372,9 +1372,9 @@ section {
   nav ul li.bt:hover {
     color: white;
     background: #56b8e6;
-    border-radius: 0%;
+    /* border-radius: 0%; */
     width: 28%;
-    margin-left: 10px;
+    /* margin-left: 10px; */
   }
   nav ul li.rr {
     margin-bottom: 15px;
