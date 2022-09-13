@@ -83,6 +83,10 @@ nav ul li.bt:hover {
   border-radius: 5%;
 }
 
+.homer {
+  font-size: 45px;
+}
+
 
 /*--------------------------------------------------------------
 # Sections & Section Header
@@ -267,6 +271,10 @@ section {
   }
 
   /* personal */
+
+  .homer {
+    font-size: 38px;
+  }
 
   nav ul li.bt a {
     padding: 5px 10px;
