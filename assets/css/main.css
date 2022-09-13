@@ -86,6 +86,19 @@ nav ul li.bt a:hover {
   font-size: 45px;
 }
 
+.cr {
+  color: #56b8e6 !important;
+}
+
+.who-am-i {
+  color: #29486a;
+  margin-top: 10px;
+}
+
+.responsive {
+  width: 100%;
+}
+
 
 /*--------------------------------------------------------------
 # Sections & Section Header
@@ -272,7 +285,7 @@ section {
   /* personal */
 
   .homer {
-    font-size: 38px;
+    font-size: 35px;
   }
 
   nav ul li.bt a {
