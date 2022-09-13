@@ -278,11 +278,21 @@ section {
   }
 
   nav ul li.bt a:hover {
+    padding: 5px 10px;
     margin-left: 10px;
+    padding-right: 5px;
+    border-radius: 0%;
   }
 
   nav ul li.bt {
     width: 25%;
+  }
+  nav ul li.bt:hover {
+    color: white;
+    background: #56b8e6;
+    border-radius: 0%;
+    width: 25%;
+    margin-left: 10px;
   }
   nav ul li.rr {
     margin-bottom: 15px;
@@ -291,14 +301,6 @@ section {
   nav ul li.rr:hover {
     margin-bottom: 15px;
     width: 38%;
-  }
-  
-  nav ul li.bt:hover {
-    color: white;
-    background: #56b8e6;
-    border-radius: 0%;
-    width: 25%;
-    margin-left: 10px;
   }
 
   nav ul li.dpr {
@@ -580,18 +582,26 @@ section {
     margin-left: 10px;
     margin-right: -7px;
   }
-  /* nav ul li.bt a:hover {
+  nav ul li.bt a:hover {
+    padding: 5px 10px;
     margin-left: 10px;
     margin-right: -7px;
     padding-right: 5px;
     border-radius: 0%;
     color: white;
     background: #56b8e6;
-  } */
+  }
 
   nav ul li.bt {
     width: 25%;
     margin-top: 15px;
+  }
+  nav ul li.bt:hover {
+    color: white;
+    background: #56b8e6;
+    border-radius: 0%;
+    width: 25%;
+    margin-left: 10px;
   }
   nav ul li.rr {
     margin-bottom: 15px;
@@ -600,14 +610,6 @@ section {
   nav ul li.rr:hover {
     margin-bottom: 15px;
     width: 28%;
-  }
-  
-  nav ul li.bt:hover {
-    color: white;
-    background: #56b8e6;
-    border-radius: 0%;
-    width: 25%;
-    margin-left: 10px;
   }
 
   nav ul li.dpr {
@@ -1338,7 +1340,7 @@ section {
     margin: 0 5px;
   }
   /* personal */
-  /* nav ul li.bt a {
+  nav ul li.bt a {
     padding: 5px 10px;
     color: #56b8e6;
     border: 1.5px solid #56b8e6;
@@ -1353,16 +1355,13 @@ section {
     border-radius: 0%;
     margin-left: 10px;
     margin-right: -7px;
-  } */
+    color: white;
+    background: #56b8e6;
+  }
 
   nav ul li.bt {
     width: 28%;
   }
-  nav ul li.rr {
-    margin-bottom: 15px;
-    width: 30%;
-  }
-  
   nav ul li.bt:hover {
     color: white;
     background: #56b8e6;
@@ -1370,6 +1369,11 @@ section {
     width: 28%;
     margin-left: 10px;
   }
+  nav ul li.rr {
+    margin-bottom: 15px;
+    width: 30%;
+  }
+  
   nav ul li.rr:hover {
     margin-bottom: 15px;
     width: 30%;
