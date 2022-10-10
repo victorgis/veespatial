@@ -96,9 +96,8 @@
 
     <!-- ======= Portfolio Section ======= -->
     <section id="weather-app" class="weather-app">
-      <div class="container">
+      <div class="container fullback">
         <div class="row">
-
             <!-- Left Side -->
             <div class="col-lg-4 p-0" data-aos="fade-up" data-aos-delay="100">
                 <div class="colored-background">
@@ -122,11 +121,13 @@
                             <p id="city" class="poppins-p mt-4"></p>
                         </div>
                     </div>
+
+                    <!-- Search Button -->
                     <div class="col-lg-6 sec" data-aos="fade-up" data-aos-delay="100">
                         <div class="search-container">
-                            <form>
-                              <input type="text" placeholder="Search location..." name="search">
-                              <button type="submit"><i class="ri-search-line"></i></button>
+                            <form method="post">
+                              <input id="search" type="text" placeholder="Search location..." name="search">
+                              <button id="btn" type="submit"><i class="ri-search-line"></i></button>
                             </form>
                           </div>
                     </div>

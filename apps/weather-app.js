@@ -1,12 +1,46 @@
 let atm = [
-    '<i class="ri-rainy-line"></i>', '<i class="ri-sun-line"></i>', '<i class="ri-sun-cloudy-line"></i>', '<i class="ri-sun-foggy-line"></i>', '<i class="ri-cloudy-2-line"></i>'
+    '<i class="ri-rainy-line"></i>', '<i class="ri-sun-line"></i>', '<i class="ri-sun-cloudy-line"></i>', '<i class="ri-sun-foggy-line"></i>', '<i class="ri-cloudy-2-line"></i>', '<i class="ri-thunderstorms-line"></i>', '<i class="ri-showers-line"></i>', '<i class="ri-cloud-windy-line"></i>'
 ]
 
 let weather = [];
+let obj = {};
+
+//get name of city
+let btn = document.getElementById('btn').addEventListener("click", function(event){
+    event.preventDefault()
+    let cityNames = document.getElementById('search').value;
+
+    fetch(`http://api.positionstack.com/v1/forward?access_key=7ad8f96f85c46d6db171ea67e84771b0&query=${cityNames}`)
+        .then((response) => response.json())
+        .then((data) => {
+            console.log('geocoding', data.data[0].latitude)
+            let datay = data.data[0].latitude;
+            let datax = data.data[0].longitude;
+
+            Object.assign(obj, {lat: `${datay}`, long: `${datax}`});
+        })
+    
+
+    
+
+    
+
+});
+
+console.log(obj)
 
 navigator.geolocation.getCurrentPosition((position) => {
+    console.log(obj.length)
     let latitude = position.coords.latitude;
     let longitude = position.coords.longitude;
+
+    // if (obj){
+    //     latitude = obj.lat;
+    //     longitude = obj.long;
+
+        
+    // }
+
     
     //weather
     fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=ee914cdd33ab3acb4346421f7daf6fd4`)
@@ -49,18 +83,24 @@ navigator.geolocation.getCurrentPosition((position) => {
             }else if (names.weather[0].description === 'moderate rain'){
                 return atmosphere.innerHTML = atm[2]
             }else if (names.weather[0].description === 'light rain'){
-                return atmosphere.innerHTML = atm[0]
+                return atmosphere.innerHTML = atm[6]
             }else if (names.weather[0].description === 'overcast clouds'){
                 return atmosphere.innerHTML = atm[4]
             }else if (names.weather[0].description === 'broken clouds'){
-                return atmosphere.innerHTML = atm[4]
+                return atmosphere.innerHTML = atm[7]
+            }else if (names.weather[0].description === 'thunderstorm with heavy rain'){
+                    return atmosphere.innerHTML = atm[5]
             }else{
                 return atmosphere.innerHTML = atm[3]
             }
 
             
         });
+
+        
 });
+
+
 
 
 //Get Current Date
@@ -79,7 +119,4 @@ dateMonth.innerText = `${month} ${year}`
 let fullDate = document.getElementById('fullDate');
 fullDate.innerText = d.toDateString()
 
-//get name of city
-
-// console.log(weather[0].name)
 
