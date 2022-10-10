@@ -1,0 +1,128 @@
+.white-background {
+    background: #fff;
+    padding: 20px 40px 40px;
+    
+
+
+}
+.colored-background {
+    background: linear-gradient(to bottom, #43546f 10%, #1b2f45 100%);
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+    
+}
+
+.p-0 {
+    padding: 0px;
+}
+
+.sec {
+    padding: 10px;
+}
+
+.weather-app {
+    background-color: #E9ECED;
+    color: #1b2f45;
+
+}
+
+/* Search widget */
+.search-container {
+    float: right;
+    
+}
+  
+input[type=text] {
+    padding: 6px;
+    padding-left: 30px;
+    margin-top: 8px;
+    font-family: 'poppins';
+    font-size: 17px;
+    border: .4px #ccc solid;
+    /* border-radius: 5px; */
+}
+
+.search-container button {
+    float: right;
+    padding: 6px 10px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: #ddd;
+    font-family: 'poppins';
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+}
+  
+.search-container button:hover {
+    background: #ccc;
+}
+
+.dateMonth {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+                                                
+}
+.fullDate {
+    font-family: 'Poppins', sans-serif;
+}
+.poppins-h {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: large;
+}
+
+.poppins-p {
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.weather-section {
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.weather-box {
+    background: #f0f0f0;
+    width: 100%;
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px;
+
+}
+
+.w-icons {
+    font-size: 50px;
+    color: #56b8e6;
+    /* float: right; */
+}
+
+div.faded-p {
+    margin: 13px;
+    /* margin: auto; */
+
+}
+
+.faded-p {
+    color: #7b7b7b80;
+    font-family: 'poppins';
+}
+
+.windSpead {
+    font-size: 50px;
+}
+
+#bigCity {
+    font-weight: 900;
+}
+
+#bigCityTemp {
+    font-weight: 800;
+    font-size: 50px;
+}
+
+.atmosphere {
+    font-size: 231px;
+}
+  
