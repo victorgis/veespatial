@@ -171,6 +171,8 @@ dateMonth.innerText = `${month} ${year}`
 
 // full date
 let fullDate = document.getElementById('fullDate');
-fullDate.innerText = d.toDateString()
+let fullTime = document.getElementById('fullTime');
+fullDate.innerText = `${d.toDateString()}`
+fullTime.innerText = `${d.toTimeString()}`
 
 
