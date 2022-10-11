@@ -11,11 +11,12 @@ let btn = document.getElementById('btn').addEventListener("click", function(even
     
     let cityNames = document.getElementById('search').value;
 
-    fetch(`http://api.positionstack.com/v1/forward?access_key=7ad8f96f85c46d6db171ea67e84771b0&query=${cityNames}`)
+    fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${cityNames}&limit=5&appid=ee914cdd33ab3acb4346421f7daf6fd4`)
         .then((response) => response.json())
         .then((data) => {
-            let datay = data.data[0].latitude;
-            let datax = data.data[0].longitude;
+            console.log(data)
+            let datay = data[0].lat;
+            let datax = data[0].lon;
 
             Object.assign(obj, {lat: `${datay}`, long: `${datax}`});
             // obj.push(datay, datax)
@@ -25,10 +26,7 @@ let btn = document.getElementById('btn').addEventListener("click", function(even
                 }
             }
             load();
-
         })
-    
-
 });
 
 
