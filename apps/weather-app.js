@@ -1,13 +1,14 @@
 let atm = [
     '<i class="ri-rainy-line"></i>', '<i class="ri-sun-line"></i>', '<i class="ri-sun-cloudy-line"></i>', '<i class="ri-sun-foggy-line"></i>', '<i class="ri-cloudy-2-line"></i>', '<i class="ri-thunderstorms-line"></i>', '<i class="ri-showers-line"></i>', '<i class="ri-cloud-windy-line"></i>'
-]
-
+];
 let weather = [];
-let obj = [];
+let obj = {};
 
 //get name of city
 let btn = document.getElementById('btn').addEventListener("click", function(event){
-    event.preventDefault()
+    event.preventDefault();
+    
+    
     let cityNames = document.getElementById('search').value;
 
     fetch(`http://api.positionstack.com/v1/forward?access_key=7ad8f96f85c46d6db171ea67e84771b0&query=${cityNames}`)
@@ -16,143 +17,134 @@ let btn = document.getElementById('btn').addEventListener("click", function(even
             let datay = data.data[0].latitude;
             let datax = data.data[0].longitude;
 
-            // Object.assign(obj, {lat: `${datay}`, long: `${datax}`});
-            obj.push(datay, datax)
+            Object.assign(obj, {lat: `${datay}`, long: `${datax}`});
+            // obj.push(datay, datax)
+            function load (){
+                if (obj){
+                    search()
+                }
+            }
+            load();
 
         })
     
-        console.log('here', obj)
+
 });
 
 
 
 navigator.geolocation.getCurrentPosition((position) => {
 
-    if (obj.length != 2){
-        let latitude = position.coords.latitude;
-        let longitude = position.coords.longitude;
-        
-        //weather
-        fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=ee914cdd33ab3acb4346421f7daf6fd4`)
-            .then((response) => response.json())
-            .then((data) => {
-                let names = data
+    let latitude = position.coords.latitude;
+    let longitude = position.coords.longitude;
 
-                let city = document.getElementById('city');
-                let bigCity = document.getElementById('bigCity');
-                console.log(names)
-                city.innerText = `${names.name}, ${names.sys.country}`
-                bigCity.innerText = `${names.name}, ${names.sys.country}`
+    //weather
+    fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=ee914cdd33ab3acb4346421f7daf6fd4`)
+        .then((response) => response.json())
+        .then((data) => {
+            let names = data
 
-                let windSpead = document.getElementById('windSpead')
-                windSpead.innerText = `${(names.wind.speed).toFixed(1)} m/s`
+            let city = document.getElementById('city');
+            let bigCity = document.getElementById('bigCity');
+            city.innerText = `${names.name}, ${names.sys.country}`
+            bigCity.innerText = `${names.name}, ${names.sys.country}`
 
-                let visibility = document.getElementById('visibility');
-                visibility.innerText= `${(names.visibility/1000).toFixed(1)} km`
+            let windSpead = document.getElementById('windSpead')
+            windSpead.innerText = `${(names.wind.speed).toFixed(1)} m/s`
 
-                let bigCityTemp = document.getElementById('bigCityTemp')
-                let temp = document.getElementById('temp');
-                bigCityTemp.innerText = `${(names.main.temp - 273.15).toFixed(1)} °C`
-                temp.innerText = `${(names.main.temp - 273.15).toFixed(1)} °C`
+            let visibility = document.getElementById('visibility');
+            visibility.innerText= `${(names.visibility/1000).toFixed(1)} km`
 
-                let feelsLike = document.getElementById('feelsLike');
-                feelsLike.innerText = `feels like ${(names.main.feels_like - 273.15).toFixed(1)} °C`
-                
-                let humidity = document.getElementById('humidity');
-                humidity.innerText = `${names.main.humidity} %`
+            let bigCityTemp = document.getElementById('bigCityTemp')
+            let temp = document.getElementById('temp');
+            bigCityTemp.innerText = `${(names.main.temp - 273.15).toFixed(1)} °C`
+            temp.innerText = `${(names.main.temp - 273.15).toFixed(1)} °C`
 
-                let atmosphereP = document.getElementById('atmosphereP');
-                atmosphereP.innerText = `${names.weather[0].description}`
+            let feelsLike = document.getElementById('feelsLike');
+            feelsLike.innerText = `feels like ${(names.main.feels_like - 273.15).toFixed(1)} °C`
+            
+            let humidity = document.getElementById('humidity');
+            humidity.innerText = `${names.main.humidity} %`
 
-                // For atmosphere images
-                if (names.weather[0].description === 'rain'){
-                    let atmosphere = document.getElementById('atmosphere');
-                    return atmosphere.innerHTML = atm[0]
-                }else if (names.weather[0].description === 'clear sky'){
-                    return atmosphere.innerHTML = atm[1]
-                }else if (names.weather[0].description === 'moderate rain'){
-                    return atmosphere.innerHTML = atm[2]
-                }else if (names.weather[0].description === 'light rain'){
-                    return atmosphere.innerHTML = atm[6]
-                }else if (names.weather[0].description === 'overcast clouds'){
-                    return atmosphere.innerHTML = atm[4]
-                }else if (names.weather[0].description === 'broken clouds'){
-                    return atmosphere.innerHTML = atm[7]
-                }else if (names.weather[0].description === 'thunderstorm with heavy rain'){
-                        return atmosphere.innerHTML = atm[5]
-                }else{
-                    return atmosphere.innerHTML = atm[3]
-                }
+            let atmosphereP = document.getElementById('atmosphereP');
+            atmosphereP.innerText = `${names.weather[0].description}`
 
-                
-            });
-    }else if (obj.length >= 2){
-        
-        // let latitude = obj.lat;
-        // let longitude = obj.long;
+            // For atmosphere images
+            if (names.weather[0].description === 'rain'){
+                let atmosphere = document.getElementById('atmosphere');
+                return atmosphere.innerHTML = atm[0]
+            }else if (names.weather[0].description === 'clear sky'){
+                return atmosphere.innerHTML = atm[1]
+            }else if (names.weather[0].description === 'moderate rain'){
+                return atmosphere.innerHTML = atm[2]
+            }else if (names.weather[0].description === 'light rain'){
+                return atmosphere.innerHTML = atm[6]
+            }else if (names.weather[0].description === 'overcast clouds'){
+                return atmosphere.innerHTML = atm[4]
+            }else if (names.weather[0].description === 'broken clouds'){
+                return atmosphere.innerHTML = atm[7]
+            }else if (names.weather[0].description === 'thunderstorm with heavy rain'){
+                    return atmosphere.innerHTML = atm[5]
+            }else{
+                return atmosphere.innerHTML = atm[3]
+            }
 
-
-        //weather
-        fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${obj.lat}&lon=${obj.long}&appid=ee914cdd33ab3acb4346421f7daf6fd4`)
-            .then((response) => response.json())
-            .then((data) => {
-                let names = data
-
-                let city = document.getElementById('city');
-                let bigCity = document.getElementById('bigCity');
-                console.log(names)
-                city.innerText = `${names.name}, ${names.sys.country}`
-                bigCity.innerText = `${names.name}, ${names.sys.country}`
-
-                let windSpead = document.getElementById('windSpead')
-                windSpead.innerText = `${(names.wind.speed).toFixed(1)} m/s`
-
-                let visibility = document.getElementById('visibility');
-                visibility.innerText= `${(names.visibility/1000).toFixed(1)} km`
-
-                let bigCityTemp = document.getElementById('bigCityTemp')
-                let temp = document.getElementById('temp');
-                bigCityTemp.innerText = `${(names.main.temp - 273.15).toFixed(1)} °C`
-                temp.innerText = `${(names.main.temp - 273.15).toFixed(1)} °C`
-
-                let feelsLike = document.getElementById('feelsLike');
-                feelsLike.innerText = `feels like ${(names.main.feels_like - 273.15).toFixed(1)} °C`
-                
-                let humidity = document.getElementById('humidity');
-                humidity.innerText = `${names.main.humidity} %`
-
-                let atmosphereP = document.getElementById('atmosphereP');
-                atmosphereP.innerText = `${names.weather[0].description}`
-
-                // For atmosphere images
-                if (names.weather[0].description === 'rain'){
-                    let atmosphere = document.getElementById('atmosphere');
-                    return atmosphere.innerHTML = atm[0]
-                }else if (names.weather[0].description === 'clear sky'){
-                    return atmosphere.innerHTML = atm[1]
-                }else if (names.weather[0].description === 'moderate rain'){
-                    return atmosphere.innerHTML = atm[2]
-                }else if (names.weather[0].description === 'light rain'){
-                    return atmosphere.innerHTML = atm[6]
-                }else if (names.weather[0].description === 'overcast clouds'){
-                    return atmosphere.innerHTML = atm[4]
-                }else if (names.weather[0].description === 'broken clouds'){
-                    return atmosphere.innerHTML = atm[7]
-                }else if (names.weather[0].description === 'thunderstorm with heavy rain'){
-                        return atmosphere.innerHTML = atm[5]
-                }else{
-                    return atmosphere.innerHTML = atm[3]
-                }
-
-                
-            });
-            console.log(obj.length)
-    }
-
-    
-
-        
+            
+        });  
 });
+
+let search = ()=> {
+    fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${obj.lat}&lon=${obj.long}&appid=ee914cdd33ab3acb4346421f7daf6fd4`)
+    .then((response) => response.json())
+    .then((data) => {
+        let names = data
+
+        let city = document.getElementById('city');
+        let bigCity = document.getElementById('bigCity');
+        city.innerText = `${names.name}, ${names.sys.country}`
+        bigCity.innerText = `${names.name}, ${names.sys.country}`
+
+        let windSpead = document.getElementById('windSpead')
+        windSpead.innerText = `${(names.wind.speed).toFixed(1)} m/s`
+
+        let visibility = document.getElementById('visibility');
+        visibility.innerText= `${(names.visibility/1000).toFixed(1)} km`
+
+        let bigCityTemp = document.getElementById('bigCityTemp')
+        let temp = document.getElementById('temp');
+        bigCityTemp.innerText = `${(names.main.temp - 273.15).toFixed(1)} °C`
+        temp.innerText = `${(names.main.temp - 273.15).toFixed(1)} °C`
+
+        let feelsLike = document.getElementById('feelsLike');
+        feelsLike.innerText = `feels like ${(names.main.feels_like - 273.15).toFixed(1)} °C`
+        
+        let humidity = document.getElementById('humidity');
+        humidity.innerText = `${names.main.humidity} %`
+
+        let atmosphereP = document.getElementById('atmosphereP');
+        atmosphereP.innerText = `${names.weather[0].description}`
+
+        // For atmosphere images
+        if (names.weather[0].description === 'rain'){
+            let atmosphere = document.getElementById('atmosphere');
+            return atmosphere.innerHTML = atm[0]
+        }else if (names.weather[0].description === 'clear sky'){
+            return atmosphere.innerHTML = atm[1]
+        }else if (names.weather[0].description === 'moderate rain'){
+            return atmosphere.innerHTML = atm[2]
+        }else if (names.weather[0].description === 'light rain'){
+            return atmosphere.innerHTML = atm[6]
+        }else if (names.weather[0].description === 'overcast clouds'){
+            return atmosphere.innerHTML = atm[4]
+        }else if (names.weather[0].description === 'broken clouds'){
+            return atmosphere.innerHTML = atm[7]
+        }else if (names.weather[0].description === 'thunderstorm with heavy rain'){
+                return atmosphere.innerHTML = atm[5]
+        }else{
+            return atmosphere.innerHTML = atm[3]
+        }
+    });
+}
 
 
 
