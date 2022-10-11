@@ -70,7 +70,7 @@ input {
     font-size: 17px;
     border: .4px #ccc solid;
     /* display: block; */
-    width: 100%;
+    /* width: 100%; */
     appearance: none;
     /* border-radius: 5px; */
 }
