@@ -14,7 +14,6 @@ let btn = document.getElementById('btn').addEventListener("click", function(even
     fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${cityNames}&limit=5&appid=ee914cdd33ab3acb4346421f7daf6fd4`)
         .then((response) => response.json())
         .then((data) => {
-            console.log(data)
             let datay = data[0].lat;
             let datax = data[0].lon;
 
