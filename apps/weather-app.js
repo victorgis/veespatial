@@ -11,7 +11,7 @@ let btn = document.getElementById('btn').addEventListener("click", function(even
     
     let cityNames = document.getElementById('search').value;
 
-    fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${cityNames}&limit=5&appid=ee914cdd33ab3acb4346421f7daf6fd4`)
+    fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${cityNames}&limit=5&appid=ee914cdd33ab3acb4346421f7daf6fd4`)
         .then((response) => response.json())
         .then((data) => {
             console.log(data)
