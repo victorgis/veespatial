@@ -69,7 +69,7 @@ input[type=text] {
 }
 
 .search-container button {
-    display: inline;
+    /* display: inline; */
     padding: 6px 10px;
     margin-top: 8px;
     margin-right: 16px;
