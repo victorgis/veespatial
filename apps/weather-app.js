@@ -1,5 +1,5 @@
 let atm = [
-    '<i class="ri-rainy-line"></i>', '<i class="ri-sun-line"></i>', '<i class="ri-sun-cloudy-line"></i>', '<i class="ri-sun-foggy-line"></i>', '<i class="ri-cloudy-2-line"></i>', '<i class="ri-thunderstorms-line"></i>', '<i class="ri-showers-line"></i>', '<i class="ri-cloud-windy-line"></i>'
+    '<i class="ri-rainy-line"></i>', '<i class="ri-sun-line"></i>', '<i class="ri-drizzle-line"></i>', '<i class="ri-sun-foggy-line"></i>', '<i class="ri-cloudy-2-line"></i>', '<i class="ri-thunderstorms-line"></i>', '<i class="ri-showers-line"></i>', '<i class="ri-cloud-windy-line"></i>'
 ];
 let weather = [];
 let obj = {};
