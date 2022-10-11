@@ -10,12 +10,15 @@ let btn = document.getElementById('btn').addEventListener("click", function(even
     
     
     let cityNames = document.getElementById('search').value;
+    // https://api.openweathermap.org/geo/1.0/direct?q=${cityNames}&limit=5&appid=ee914cdd33ab3acb4346421f7daf6fd4
+    
 
-    fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${cityNames}&limit=5&appid=ee914cdd33ab3acb4346421f7daf6fd4`)
+    fetch(`https://api.weatherapi.com/v1/current.json?key=d25f6aa77d8c4da18a5203048220910&q=${cityNames}&aqi=no`)
         .then((response) => response.json())
         .then((data) => {
-            let datay = data[0].lat;
-            let datax = data[0].lon;
+            console.log(data)
+            let datay = data.location.lat;
+            let datax = data.location.lon;
 
             Object.assign(obj, {lat: `${datay}`, long: `${datax}`});
             // obj.push(datay, datax)
