@@ -18,8 +18,11 @@ let btn = document.getElementById('btn').addEventListener("click", function(even
         .then((response) => response.json())
         .then((data) => {
             console.log(data)
-            let datay = data.location.lat;
-            let datax = data.location.lon;
+            // let datay = data.location.lat;
+            // let datax = data.location.lon;
+
+            let datay = data[0].lat;
+            let datax = data[0].lon;
 
             Object.assign(obj, {lat: `${datay}`, long: `${datax}`});
             // obj.push(datay, datax)
