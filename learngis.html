@@ -5,31 +5,29 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>My Weather App - Victor Essang</title>
-  <meta content="A weather app that gives you the weather condition of your current location. " name="description">
+  <title>Learn GIS - Victor Essang</title>
+  <meta content="Register for GIS Training. " name="description">
   <meta content="GIS, Web, Manager, Software, Akwa Ibom, Africa" name="keywords">
 
   <!-- Favicons -->
-  <link href="../assets/img/favicon.png" rel="icon">
-  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-  <!-- <link href="http://fonts.cdnfonts.com/css/poppins" rel="stylesheet"> -->
 
   <!-- Vendor CSS Files -->
-  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="../assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="../assets/css/main.css" rel="stylesheet">
-  <link href="style.css" rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: Nova - v1.1.0
@@ -39,13 +37,13 @@
   ======================================================== -->
 </head>
 
-<body class="page-portfolio">
+<body class="page-about">
 
   <!-- ======= Header ======= -->
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
 
-      <a href="../index.html" class="logo d-flex align-items-center">
+      <a href="index.html" class="logo d-flex align-items-center">
         <!-- Uncomment the line below if you also wish to use an image logo -->
         <!-- <img src="assets/img/logo.png" alt=""> -->
         <!-- <h1 class="d-flex align-items-center"><span style="color: #56b8e6;">Vee</span>spatial</h1> -->
@@ -57,22 +55,22 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a href="../index.html" class="active">Home</a></li>
+          <li><a href="index.html" class="active">Home</a></li>
           <li class="dropdown"><a href="#"><span>Portfolio</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
             <ul>
-              <li><a href="../mymaps.html">My Maps</a></li>
-              <li><a href="weather-app.html">Weather App</a></li>
+              <li><a href="mymaps.html">My Maps</a></li>
+              <li><a href="./apps/weather-app.html">Weather App</a></li>
             </ul>
           </li>
           
-          <li><a href="../about.html">About Me</a></li>
-          <li><a href="../learngis.html">Learn GIS</a></li>
+          <li><a href="about.html">About Me</a></li>
+          <li><a href="learngis.html">Learn GIS</a></li>
           <li><a href="https://medium.com/@victorgis" target="_blank">Blog</a></li>
           <li class="dpr"><a>       </a></li>
           <li class="dpr"><a>       </a></li>
           <li class="dpr"><a>       </a></li>
-          <li class="bt rr"><a href="../resume.html">My Resume</a></li>
-          <li class="bt"><a href="../contact.html">Reach Me</a></li>
+          <li class="bt rr"><a href="resume.html">My Resume</a></li>
+          <li class="bt"><a href="contact.html">Reach Me</a></li>
         </ul>
       </nav>
       <!-- .navbar -->
@@ -83,102 +81,53 @@
   <main id="main">
 
     <!-- ======= Breadcrumbs ======= -->
-    <div class="breadcrumbs d-flex align-items-center" style="background-image: url('../assets/img/weatherApp-header.jpg');">
+    <div class="breadcrumbs d-flex align-items-center" style="background-image: url('assets/img/about-header.jpg');">
       <div class="container position-relative d-flex flex-column align-items-center">
 
-        <h2>My Weather App</h2>
+        <h2>About</h2>
         <ol>
-          <li><a href="../index.html">Home</a></li>
-          <li>Weather App</li>
+          <li><a href="index.html">Home</a></li>
+          <li>About</li>
         </ol>
 
       </div>
     </div>
     <!-- End Breadcrumbs -->
 
-    <!-- ======= Portfolio Section ======= -->
-    <section id="weather-app" class="weather-app">
-      <div class="container fullback">
-        <div class="row">
-            <!-- Left Side -->
-            <div class="col-lg-4 p-0" data-aos="fade-up" data-aos-delay="100">
-                <div class="colored-background">
-                    <h1 id="bigCity" class="mt-5"></h1>
-                    <p id="atmosphereP" class="poppins-p mt-4"></p>
-                    <span id="atmosphere" class="atmosphere"></span>
-                    <h1 id="bigCityTemp"></h1>
-                    <p id="feelsLike"></p>
-                </div>
-            </div>
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
 
-            <!-- Right side -->
-           <div class="col-lg-8 p-0" data-aos="fade-up" data-aos-delay="100">
-            <div class="white-background">
-                <div class="row">
-                    <div class="col-lg-6 sec" data-aos="fade-up" data-aos-delay="100">
-                        <h4 id="dateMonth" class="dateMonth"></h4>
-                        <p id="fullDate" class="fullDate"></p>
-                        <p id="fullTime" class="fullDate"></p>
-                        <div class="weather-section">
-                            <h1 class="poppins-h">Today's Overview</h1>
-                            <p id="city" class="poppins-p mt-4"></p>
-                        </div>
-                    </div>
-
-                    <!-- Search Button -->
-                    <div class="col-lg-6 sec" data-aos="fade-up" data-aos-delay="100">
-                        <div class="search-container">
-                            <form>
-                              <input type="text" name="search" id="search"  placeholder="Search location..." >
-                              <!-- <div class="text-center"><button id="btn" type="submit">Send Message</button></div> -->
-                              <button id="btn" type="submit"><i class="ri-search-line"></i></button>
-                            </form>
-                          </div>
-                    </div>
-                </div>
-
-                <!-- Boards -->
-                <div class="row">
-                    <!-- Temperature -->
-                    <div class="col-lg-6 sec" >
-                        <div class="weather-box">
-                            <i class="ri-temp-hot-line w-icons"></i>
-                            <h1 id="temp" class="poppins-h"></h1>
-                            <p class="faded-p">Temperature</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 sec" >
-                        <div class="weather-box">
-                            <i class="ri-treasure-map-line w-icons"></i>
-                            <h1 id="visibility" class="poppins-h"></h1>
-                            <p class="faded-p">Visibility</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 sec" >
-                        <div class="weather-box">
-                            <i class="ri-windy-fill w-icons"></i>
-                            <h1 id="windSpead" class="poppins-h"></h1>
-                            <p class="faded-p">Wind Speed</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 sec" >
-                        <div class="weather-box">
-                            <i class="ri-mist-fill w-icons"></i>
-                            <h1 id="humidity" class="poppins-h"></h1>
-                            <p class="faded-p">Humidity</p>
-                        </div>
-                    </div>
-                </div>
-                
-            </div>
+        <div class="row gy-4" data-aos="fade-up">
+          <div class="col-lg-4">
+            <img src="assets/img/about.jpg" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-8">
+            <div class="content ps-lg-5">
+              <h3>Who am I?</h3>
+              <p>
+                Hi, I am Victor (<span style="color: #56b8e6;">Vee</span>spatial), a GIS Consultant living in the beautiful city of Uyo, Nigeria. I'm passionate about using Geographic Information System (GIS) technology in solving real-world problems. I have over 6 years experience in providing project and research support to drive success via Geographic Information System.
+              </p>
+              <p>
+                I currently work with an amazing team at Releaf Marketplace Limited, as a Lead GIS Developer. At Releaf, I demonstrate my GIS capabilities using ArcGIS JavaScript API, along with VueJS, to build and manage a web app that allows you to position factories in their best possible and suitable location, given the particular focus on environmental, cultural, and socio-economic factors.
+              </p>
             
-           </div>
-           
+            </div>
+          </div>
+        </div>
+        <div class="who-am-i">
+          <p>In 2020, I was opportune to build the Akwa Ibom State Covid-19 ArcGIS Operations Dashboard, during the covid-19 surge. The dashboard was developed using <a href="https://www.arcgis.com/index.html">ArcGIS online</a> platform under Africa-Geoportal licence. The dashboard was used to monitor and enhance case-finding efforts as well as operations management and decision-making as regards emergency response for the state.</p>
+          <p>Also, I have hosted several virtual humanitarian mapping exercises. Last year, in June 2021, I co-hosted one for the improvement of HIV/AIDS & Gender-based violence (GBV) projects in Ibeno LGA, Akwa Ibom State, Nigeria. You can read up about it here: <a href="https://precisegis.com.ng/humanitarian-mapping-exercise-for-improvement-in-hiv-aids-gender-based-violence-gbv-projects-in-nigeria/">https://precisegis.com.ng/humanitarian-mapping-exercise-for-improvement-in-hiv-aids-gender-based-violence-gbv-projects-in-nigeria/</a></p>
+          <p>Furthermore, I've been a Data & GIS Analyst with FHI 360, in Akwa Ibom State under the SIDHAS project in collaboration with the Ministry of Health as a MERL intern.</p>
+          <p>I am a member of the Geospatial Forum of Nigeria (GNF), I have been directly involved in conducting & facilitating various trainings/workshops for both GIS and Data Science specialists across Nigeria on the GNP platform.</p>
+          <p>Furthermore, I'm skilled in the use of Leaflet, Geoserver, PostGIS, GeoDjango, QGIS, ArcGIS, Python Scripting & Remote Sensing.</p>
+          <p>If you agree with me that I'm a great choice, kindly contact me via my contact channels.</p>
+          <p>Thank you.</p>
         </div>
 
       </div>
     </section>
-    <!-- End Portfolio Section -->
+    <!-- End About Section -->
 
     <section id="contact" class="contact">
       <div class="container position-relative" data-aos="fade-up">
@@ -253,7 +202,6 @@
 
       </div>
     </section>
-
   </main>
   <!-- End #main -->
 
@@ -264,7 +212,7 @@
       <div class="container">
         <div class="row gy-4">
           <div class="col-lg-5 col-md-12 footer-info">
-            <a href="../index.html" class="logo d-flex align-items-center">
+            <a href="index.html" class="logo d-flex align-items-center">
               <span>Victor Essang</span>
             </a>
             <p>(<span style="color: #56b8e6;">Vee</span>spatial)</p><br>
@@ -282,11 +230,10 @@
             <h4>Useful Links</h4>
             <ul>
               <li><i class="bi bi-dash"></i> <a href="#">Home</a></li>
-              <li><i class="bi bi-dash"></i> <a href="../portfolio.html">Portfolio</a></li>
-              <li><i class="bi bi-dash"></i> <a href="../about.html">About Me</a></li>
-              <li><i class="bi bi-dash"></i> <a href="apps.html">Apps</a></li>
-              <li><i class="bi bi-dash"></i> <a href="../resume">My Resume</a></li>
-              <li><i class="bi bi-dash"></i> <a href="../contact.html">Reach Me</a></li>
+              <li><i class="bi bi-dash"></i> <a href="portfolio.html">Portfolio</a></li>
+              <li><i class="bi bi-dash"></i> <a href="about.html">About Me</a></li>
+              <li><i class="bi bi-dash"></i> <a href="resume">My Resume</a></li>
+              <li><i class="bi bi-dash"></i> <a href="contact.html">Reach Me</a></li>
             </ul>
           </div>
 
@@ -339,15 +286,15 @@
   <div id="preloader"></div>
 
   <!-- Vendor JS Files -->
-  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="../assets/vendor/aos/aos.js"></script>
-  <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
 
   <!-- Template Main JS File -->
-  <script src="../assets/js/main.js"></script>
-  <script src="weather-app.js"></script>
+  <script src="assets/js/main.js"></script>
 
 </body>
 
