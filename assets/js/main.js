@@ -4,6 +4,58 @@
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
 */
+
+(function() {
+  // https://dashboard.emailjs.com/admin/account
+  emailjs.init('UEbX_DWunWmxLtCA_');
+})();
+const htmlSent = `
+<div class="alert alert-success" role="alert">
+<h4 class="alert-heading">Well done!</h4>
+<p>Message Sent</p>
+</div>
+`;
+const htmlNotSent = `
+<div class="alert alert-danger" role="alert">
+<h4 class="alert-heading">Failed!</h4>
+<p>Message Not Sent</p>
+</div>
+`;
+window.onload = function() {
+  document.getElementById('contact-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+      // generate a five digit number for the contact_number variable
+      this.contact_number.value = Math.random() * 100000 | 0;
+      // these IDs from the previous steps
+      emailjs.sendForm('service_rnidvgg', 'template_h9vx8gi', this)
+          .then(function() {
+              console.log('SUCCESS!');
+              alertSuccess();
+              setTimeout(()=>{
+                document.location.reload();
+              }, 3000);
+
+          }, function(error) {
+              console.log('FAILED...', error);
+              alertFailed();
+              setTimeout(()=>{
+                // document.location.reload();
+              }, 3000);
+          });
+    
+  });
+}
+const alertSuccess = ()=>{
+const alertMe = document.getElementById("alertMe");
+alertMe.innerHTML = htmlSent;
+}
+const alertFailed = ()=>{
+const alertMe = document.getElementById("alertMe");
+alertMe.innerHTML = htmlNotSent;
+}
+
+// Email JS ends here
+
 document.addEventListener('DOMContentLoaded', () => {
   "use strict";
 

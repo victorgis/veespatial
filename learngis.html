@@ -107,7 +107,8 @@
             <div class="content ps-lg-5">
               <h3>GIS Training</h3>
               <p>* Please fill up this form to register for a GIS training and mentorship</p>
-              <form action="https://formspree.io/f/mqkjryro" method="POST">
+              <form id="contact-form" method="POST">
+                <input type="hidden" name="contact_number">
                 <div class="row">
                   <div class="col-6 form-group">
                     <input type="text" name="firstname" class="form-control" placeholder="First name" required>
@@ -121,11 +122,12 @@
                   </div>
                 </div>
                 <div class="form-group">
-                    <textarea class="form-control z-depth-1 mt-4" id="exampleFormControlTextarea6" name="purpose" rows="3" placeholder="Please share your expectations..."></textarea>
+                    <textarea type="text" name="purpose" class="form-control z-depth-1 mt-4" rows="3" placeholder="Please share your expectations..."></textarea>
                 </div>
                 <div class="text-center">
                     <button type="submit" class="btn mt-4" style="background: #56b8e6; color: white;">Register</button>
                 </div>
+                <div id="alertMe" class="margin-top-20 mt-4"></div>
               </form>
             
             </div>
@@ -336,7 +338,9 @@
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <!-- <script src="assets/vendor/php-email-form/validate.js"></script> -->
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
