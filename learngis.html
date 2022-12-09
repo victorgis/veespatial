@@ -108,23 +108,24 @@
               <h3>GIS Training</h3>
               <p>* Please fill up this form to register for a GIS training and mentorship with Victor</p>
               <form netlify>
-                <div class="row" role="form">
-                  <div class="col-6">
-                    <input type="text" class="form-control" placeholder="First name">
-                    <input type="email" class="form-control mt-4" placeholder="Email Address">
+                <div class="row">
+                  <div class="col-6 form-group">
+                    <input type="text" class="form-control" placeholder="First name" required>
+                    <input type="email" class="form-control mt-4" placeholder="Email Address" required>
                     <input type="text" class="form-control mt-4" placeholder="Country">
                   </div>
-                  <div class="col-6">
-                    <input type="text" class="form-control" placeholder="Last name">
-                    <input type="text" class="form-control mt-4" placeholder="Educational Background">
+                  <div class="col-6 form-group">
+                    <input type="text" class="form-control" placeholder="Last name" required>
+                    <input type="text" class="form-control mt-4" placeholder="Educational Background" required>
                     <input type="text" class="form-control mt-4" placeholder="City">
                   </div>
                 </div>
-                <textarea class="form-control z-depth-1 mt-4" id="exampleFormControlTextarea6" rows="3" placeholder="Please share your expectations..."></textarea>
-                <button type="button" class="btn mt-4" style="background: #56b8e6; color: white;" data-toggle="button" aria-pressed="false" autocomplete="off">
-                    Send Message
-                </button>
-                <!-- <div id="alertMe" class="mt-4"></div> -->
+                <div class="form-group">
+                    <textarea class="form-control z-depth-1 mt-4" id="exampleFormControlTextarea6" rows="3" placeholder="Please share your expectations..."></textarea>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn mt-4" style="background: #56b8e6; color: white;">Send Message</button>
+                </div>
               </form>
             
             </div>
